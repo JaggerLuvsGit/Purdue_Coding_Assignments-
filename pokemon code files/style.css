@@ -1,0 +1,171 @@
+.card-outline{
+    width: 400px;
+    height: 600px;
+    border: 15px solid silver;
+    border-radius: 15px;
+    background-color: yellow;
+    position: relative;
+
+}
+
+.card-top{
+    width: 400px;
+    height: 50px;
+    border: 3px solid silver;
+}
+
+.card-top h2{
+font-size: 30px;
+position: relative;
+}
+
+.card-top-line{
+    width: 0.1px;
+    height: 50px;
+    border: 3px solid silver;
+    left: 300px;
+    top: -174px;
+    position: relative;
+}
+
+.card-top-box{
+    width: 66px;
+    height: 15px;
+    border: 3px solid silver;
+    left: 5px;
+    top: -220px;
+    position: relative;
+}
+
+.card-top img{
+    position: relative;
+}
+
+.ring-border {
+    width: 50px; 
+    height: 70px; 
+    border: 5px solid gray;
+    border-radius: 80%; 
+    position: absolute;
+    top: 25px; 
+    left: 30px; 
+    transform: translateX(-50%) rotate(35deg); /* Center the element horizontally */
+    z-index: 1; 
+    background-color: silver;
+}
+
+.image-holder{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+    left: 20px; 
+    border: 5.5px solid silver;
+    border-radius: 15px;
+}
+
+.text-holder-1{
+    width: 400px;
+    height: 50px;
+    /*border-radius: 1px;
+    border: 5px solid silver;*/
+    position: relative;
+    top: 50px;
+}
+
+.text-holder-1 h3{
+    position: relative;
+}
+
+.text-holder-1 img{
+    position: relative;
+}
+
+.text-holder-2{
+    width: 400px;
+    height: 50px;
+  /*border-radius: 1px;
+    border: 5px solid silver;*/
+    position: relative;
+    top: 50px;
+}
+
+.text-holder-2 p{
+    position: relative;
+}
+
+.text-holder-3{
+    width: 400px;
+    height: 50px;
+    /*border-radius: 1px;
+    border: 5px solid silver;*/
+    position: relative;
+    top: 50px;
+}
+
+.text-holder-3 h3{
+    position: relative;
+}
+
+.text-holder-3 img{
+    position: relative;
+}
+
+.card-fotter-1{
+    width: 420px;
+    height: 30px;
+    border-radius: 1px;
+    border: 5px solid silver;
+    position: relative;
+    top: 30px;
+    right: 15px;
+}
+
+.card-fotter-1 h4{
+    position: relative;
+}
+
+.card-fotter-1 img{
+    position: relative;
+}
+
+.card-fotter-1-line-1{
+    width: 0.1px;
+    height: 30px;
+    border: 3px solid silver;
+    left: 175px;
+    top: -135px;
+    position: relative;
+}
+
+.card-fotter-1-line-2{
+    width: 0.1px;
+    height: 30px;
+    border: 3px solid silver;
+    left: 275px;
+    top: -235px;
+    position: relative;
+}
+
+.card-fotter-2{
+    width: 420px;
+    height: 60px;
+    border-radius: 1px;
+    border: 5px solid silver;
+    position: relative;
+    top: 30px;
+    right: 15px;
+}
+
+.card-fotter-2 h7{
+position: relative;
+}
+
+.card-fotter-2 p{
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    font-size: 12px;
+    text-align: right;
+}
