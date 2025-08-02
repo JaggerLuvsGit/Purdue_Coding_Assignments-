@@ -1,0 +1,31 @@
+@keyframes slide {
+
+    from { left: 0; }
+  
+    to {left: 60%; }
+  
+  }
+  
+  .sliding_bus {
+
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    background-image:url(bus.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation-duration: 3s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+
+    }
+
+
+
+
+
+   body{
+    background-image: url(map.png);
+   }        
+           
