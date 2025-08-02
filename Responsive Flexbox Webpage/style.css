@@ -1,0 +1,123 @@
+.wrapper{
+    position: absolute;
+    background-color:#d9b234 ;
+    width: 100%;
+    height:700px;
+    margin:20px;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 600px;
+    background-color: rgb(213, 216, 25);
+    justify-content: space-between;
+    align-content: flex-start;
+}
+
+aside {
+    position: absolute;
+    left: 61%;
+    top:10px;
+    width: 400px;
+    height: 300px;
+    background-color: rgb(226, 206, 24);
+    padding: 20px;
+    font-family:Comic;
+    color:black ;
+
+}
+
+.coupon {
+    height:120px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 180px;
+    background-color: yellow;
+    margin: 5px;
+    padding: 5px;
+    font-size: medium;
+    border: 2px dashed green;
+    text-align: center;
+
+
+}
+
+.coupon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow:  #44433f ;
+
+}
+
+.couponPlus {
+    height:220px;
+    flex: 2 1 150px;
+    background-color: yellow;
+    margin: 5px;
+    padding: 5px;
+    border: 2px dashed purple;
+    font-size: medium;
+
+
+}
+
+.couponPlus img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: #d9b234 ;
+}
+
+
+@media screen and (max-width: 1000px){
+    .wrapper {
+        width: 100%;
+        height: 1500px;
+    }
+    article{
+        width: 100%;
+        height:1100px;
+    
+    }
+    aside{
+        position: static;
+        width: 90%;
+
+    }
+    .couponPlus img{
+        width: 100px;
+        height: auto;
+        
+    }
+    .coupon {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 180px;
+
+
+    }
+}
+
+@media screen and (min-width: 1001px){
+    .wrapper{
+        width: 100%;
+        height:800px;
+    }
+    
+    article{
+        height: 700px;
+    
+    }
+    .couponPlus img{
+        width: 80%;
+        height: 140px;
+    }
+}
