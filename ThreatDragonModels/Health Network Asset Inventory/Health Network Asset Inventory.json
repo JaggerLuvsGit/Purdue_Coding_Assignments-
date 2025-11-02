@@ -610,8 +610,8 @@
                 "text": "MyChart Portal"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -708,9 +708,92 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "70a56c7b-4b4d-455a-8c5b-ce44bccc7ef3",
+                  "title": " Spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "The Attacker impersonates a legitimate patient with credential stuffing. A phishing email spoofed to appear from \"Epic Technical Support\" tricks the user into opening a malicious attachment.",
+                  "mitigation": "DMARC/SPF/DKIM implementation, email authentication, display external sender warnings, and anti-spoofing rules.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "208a9b8e-4a12-47f4-9774-5e7fdd922c40",
+                  "title": "Tampering",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An SQL injection attack allows an attacker to modify patient records, appointment data, or billing information",
+                  "mitigation": "Input validation, parameterized queries, web application firewall (WAF), and regular security code reviews.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "75131123-66e8-41f7-9df6-56720ed40974",
+                  "title": "Repuditation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Insufficient logging of patient portal access allows users to deny actions (viewing records, making changes)",
+                  "mitigation": "Comprehensive audit logging sent to Splunk SIEM, log integrity protection, and HIPAA-compliant access logs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "102789b4-6a1f-4216-9468-33f96092d44a",
+                  "title": "Information Disclosure ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Weak session management or insecure direct object references expose PHI to unauthorized users. ",
+                  "mitigation": "Secure session tokens, HTTPS enforcement, proper authorization checks, and session timeout after inactivity. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "74012371-cbad-4ca3-a242-981b91f06ae9",
+                  "title": "DDoS Attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": " A DDoS attack overwhelms the MyChart portal, making it unavailable to patients who need to access medical records.",
+                  "mitigation": "DDoS protection via Palo Alto firewall, rate limiting, CDN with DDoS protection, and load balancing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "0c9097f3-6efa-42af-89cb-c16cee02a831",
+                  "title": "Elevation of Privlege",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Path traversal or broken access control allows patient users to access administrative functions or other patients' data. ",
+                  "mitigation": "Principle of least privilege, role-based access control (RBAC), input sanitization, and regular penetration testing. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 9,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -727,8 +810,8 @@
                 "text": "Email Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -825,9 +908,66 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "a97ddccd-73c4-46a7-b4b2-27ce47350aaa",
+                  "title": "Shadow copies deleted via vsadmin [TAMPERING]",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Ransomware deleted shadow copies using the vssadmin account and the delete shadows /all /quiet command",
+                  "mitigation": "Restrict vssadmin access, monitor for shadow copy deletion, application whitelisting, and backup server isolation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "e6a67c61-7e0b-47c0-8068-3d31678f8a89",
+                  "title": "Backup Server encrypted by ransomware ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "The backup server was encrypted by ransomware, making recovery operations impossible during the incident.",
+                  "mitigation": "Air-gapped backups, immutable backup storage with correct 30-day configuration, offline tape backups, separate backup network.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "a1d5365e-9002-4851-9b3a-ef0261fe2009",
+                  "title": "Backup Retention misconfigured to 7 days.",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "An immutable backup misconfigured with 7-day retention instead of 30-day retention exposes the organization to data loss.",
+                  "mitigation": "Quarterly backup configuration audits, automated configuration validation, documented backup procedures, and regular restore testing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                },
+                {
+                  "id": "feaf27d0-094c-49b3-bec9-583f5fd27898",
+                  "title": "Compromised Backup admin credentials",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "",
+                  "description": "Compromised backup administrator credentials provide access to all backup data and the ability to delete backups",
+                  "mitigation": "Separate backup admin accounts, MFA for backup access, privileged access management, and audit backup administrator actions",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -844,8 +984,8 @@
                 "text": "VPN Gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -942,9 +1082,34 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "a80539ca-b30c-47c3-8573-7e72c44c885f",
+                  "title": "Stolen VPN Credentials for unauthorized access",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "",
+                  "description": "Stolen VPN credentials used for unauthorized remote access to the internal network",
+                  "mitigation": "MFA enabled for all VPN access (reduces risk), certificate-based authentication, and monitors VPN connections for anomalies.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1790,8 +1955,8 @@
                 "text": "Active Directory"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1888,9 +2053,66 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "7672b35d-93de-4a80-9a2c-8cb92b57546a",
+                  "title": "Pass-the-hash Attack with stolen NTLM hashes.",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Pass-the-hash attack using stolen NTLM hashes allows an attacker to authenticate as legitimate users without knowing passwords",
+                  "mitigation": "Disable NTLM where possible, implement Kerberos, credential guard, protected users group, reduce local admin rights.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                },
+                {
+                  "id": "a0993610-6a2a-40c6-9ff6-93cc2db544f3",
+                  "title": "Domain Admin creds from lsass dump",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Repudiation",
+                  "description": " Domain admin credentials were harvested from memory using lsass.exe dump on the compromised workstation.",
+                  "mitigation": "Credential Guard, protected process for lsass, no domain admin logins to workstations, tiered administration model.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "7c80e42e-103a-4d20-a53e-0eb7a51c186f",
+                  "title": "Group Policy modified to disable defender ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing",
+                  "description": "Attacker modifies Group Policy to disable Windows Defender across the entire domain.",
+                  "mitigation": "Protected GPO objects, least privilege for GPO modification, GPO change auditing, and backup domain controllers.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "20a093c8-cc34-48dc-882b-08f970a418f7",
+                  "title": "Domain Admin provides unrestricted access ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Domain administrator credentials provide unrestricted access to all systems in the network, enabling lateral movement.",
+                  "mitigation": "Privileged Access Workstations (PAWs), just-in-time admin access, reduce the number of domain admins, and monitor privileged account usage.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 4,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -2165,11 +2387,13 @@
                 "text": "EPIC SQL Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2266,13 +2490,85 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "9ee2525b-db11-4e26-bb3e-0981fc38efe3",
+                  "title": "Spoofing ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Service account credentials were stolen and used to authenticate as a legitimate database service.",
+                  "mitigation": "Implement Privileged Access Management (PAM), service account credential rotation, and monitor for abnormal service account usage.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "02a12970-11c9-46e7-855d-c665dbea709d",
+                  "title": "Ransomware ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": " Ransomware encrypts 50GB database files containing 50,000+ patient records, making them inaccessible.",
+                  "mitigation": "Network segmentation, EDR on database servers, immutable backups with proper configuration (30-day retention), and offline backup copies. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "0038feb2-28a0-4d92-b523-7b99642df117",
+                  "title": "50,000 + PHI records exfiltrated ",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "50,000+ PHI records exfiltrated to attacker C2 infrastructure before encryption",
+                  "mitigation": "Data Loss Prevention (DLP), network traffic monitoring, encryption at rest, database activity monitoring, egress filtering.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "a096c96a-1fdc-4441-a8a2-d5485c924b41",
+                  "title": "Database Encryption prevents patient care",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Database corruption or encryption prevents patient care systems from accessing critical medical information",
+                  "mitigation": "Database redundancy/clustering, tested backup and restore procedures, disaster recovery plan, RTO/RPO documentation.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "6ab0abd9-8068-443d-910e-114a017ef7b4",
+                  "title": "SQL Injection for administrative access",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "SQL injection or compromised application credentials allow unauthorized administrative access to the database. ",
+                  "mitigation": "Implement the principle of least privilege for database accounts, disable xp_cmdshell, implement input validation, enable database firewall rules, and conduct regular vulnerability scanning.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 4,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             }
           },
           {
@@ -2904,12 +3200,36 @@
               "providesAuthentication": false,
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 731,
+              "y": -20
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Health Network - OWASP Threat Dragon Asset Map"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "dde897e4-2e2b-48c2-a455-b049a89cc723",
+            "zIndex": 23,
+            "data": {
+              "type": "tm.Text",
+              "name": "Health Network - OWASP Threat Dragon Asset Map",
+              "hasOpenThreats": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 24
   }
 }
