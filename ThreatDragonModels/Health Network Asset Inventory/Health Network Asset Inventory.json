@@ -1097,19 +1097,25 @@
                   "new": false,
                   "number": 24,
                   "score": ""
+                },
+                {
+                  "id": "0ca37fb4-2add-4a27-8c75-61ed0c876de5",
+                  "title": "VPN user with excessive network privileges",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "VPN user account with excessive network privileges allows lateral movement after VPN authentication",
+                  "mitigation": "Least privilege for VPN users, network segmentation, VPN users on separate VLAN with restricted access, and regular access reviews.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "repudiation": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1790,7 +1796,16 @@
               "cell": "8143850e-cdf5-4b27-b7d8-2ffea5a6b380",
               "port": "847bd181-3add-464a-88e7-0b1d954d30cb"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 1260,
+                "y": 170
+              },
+              {
+                "x": 1430,
+                "y": 150
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -2246,8 +2261,8 @@
                 "text": "Spluk SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2344,9 +2359,53 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "2d575f7a-4209-4ff5-afc1-c4cf62adac11",
+                  "title": "SIEM contains sensitive log data",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Splunk contains sensitive log data, including authentication events, PHI access logs; compromise exposes this information.",
+                  "mitigation": "Encrypt Splunk data at rest, restrict Splunk access to the security team, separate network segment for SIEM, and audit Splunk administrator access.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                },
+                {
+                  "id": "ac3b510e-024e-4a7a-9f46-e393fe72be77",
+                  "title": "Attacker deletes logs to cover tracks ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "An attacker with access to Splunk deletes or modifies logs to cover tracks and hide evidence of compromise.",
+                  "mitigation": "Write-once log storage, forward logs to immutable storage, log integrity monitoring, and separate log forwarding accounts",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "3e87d2a8-1f4b-45be-9d6f-33f0a00e3b7c",
+                  "title": "Alert Fatigue Causes missed detections ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Alert fatigue with 15,000+ events/day causes the security team to miss critical alerts (847 overnight events ignored)",
+                  "mitigation": "Alert tuning and prioritization, reduce false positives, automated alert correlation, SOAR integration, threat intelligence feeds.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2574,7 +2633,7 @@
           {
             "position": {
               "x": 1243.25,
-              "y": 193
+              "y": 198
             },
             "size": {
               "width": 120,
@@ -2585,11 +2644,13 @@
                 "text": "File Server"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -2685,13 +2746,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "4bb9ab88-fa39-4e10-a508-3172e3ce1dc2",
+                  "title": "Ransomware encrypted 15,000+ files via SMB",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Ransomware encrypted 15,000+ files in 3 minutes via SMB share access.",
+                  "mitigation": "File access monitoring, ransomware behavioral detection, network segmentation, and restricting SMB protocol across VLANs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                },
+                {
+                  "id": "70613cc6-c503-419c-a6a7-006baec325d7",
+                  "title": "Overly permissive SMB share permissions ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Overly permissive SMB share permissions allow unauthorized access to sensitive documents and policies",
+                  "mitigation": "Least privilege file permissions, regular access reviews, Data Loss Prevention (DLP), audit file access events.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "zIndex": 17
           },
@@ -3204,7 +3298,7 @@
           {
             "position": {
               "x": 731,
-              "y": -20
+              "y": -47
             },
             "size": {
               "width": 112.5,
@@ -3230,6 +3324,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 24
+    "threatTop": 33
   }
 }
