@@ -28,8 +28,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "813b083c-4211-4ddb-9ea9-11ff3b51360c",
             "zIndex": -1,
+            "id": "813b083c-4211-4ddb-9ea9-11ff3b51360c",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
@@ -49,23 +49,14 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "a72c2eb6-542b-490f-881c-a16b68c052da",
             "zIndex": -1,
+            "id": "a72c2eb6-542b-490f-881c-a16b68c052da",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -79,8 +70,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "3a0ebbdf-30ab-4be0-b4c6-31819ce54cb1",
             "zIndex": -1,
+            "id": "3a0ebbdf-30ab-4be0-b4c6-31819ce54cb1",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -110,6 +101,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 0,
             "ports": {
               "groups": {
                 "top": {
@@ -193,7 +185,6 @@
               ]
             },
             "id": "7d2dac3f-14a6-4f2f-931a-2827eb3b0d6f",
-            "zIndex": 0,
             "data": {
               "type": "tm.Actor",
               "name": "Patient",
@@ -227,6 +218,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -310,7 +302,6 @@
               ]
             },
             "id": "026a7a91-6280-49ed-beec-e4aa1a064fa2",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Threat Actor",
@@ -344,6 +335,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -427,7 +419,6 @@
               ]
             },
             "id": "b9d35505-4f6a-4089-ad20-d9c6c7c62c3e",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Clinical Staff",
@@ -461,6 +452,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -544,7 +536,6 @@
               ]
             },
             "id": "12b91f5a-32aa-46ad-a008-ce11bbb47524",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Third Party",
@@ -573,8 +564,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "ed819d18-5946-4b8c-b360-9c851ec6c2ed",
             "zIndex": 4,
+            "id": "ed819d18-5946-4b8c-b360-9c851ec6c2ed",
             "data": {
               "type": "tm.Text",
               "name": "External Actors",
@@ -597,8 +588,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "97dd208d-0459-4afb-a4be-f636aba4df4b",
             "zIndex": 5,
+            "id": "97dd208d-0459-4afb-a4be-f636aba4df4b",
             "data": {
               "type": "tm.Text",
               "name": "Trust Boundary: DMZ",
@@ -626,6 +617,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -709,7 +701,6 @@
               ]
             },
             "id": "f9038628-f704-4e26-a0f1-047728d2bf32",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "MyChart Portal",
@@ -826,6 +817,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -909,7 +901,6 @@
               ]
             },
             "id": "88e67c65-9dda-4b67-a679-4a8899d1c0f8",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
               "name": "Email Gateway",
@@ -1000,6 +991,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -1083,7 +1075,6 @@
               ]
             },
             "id": "6ceec18c-606b-4669-9a1c-845f2cd97bab",
-            "zIndex": 8,
             "data": {
               "type": "tm.Actor",
               "name": "VPN Gateway",
@@ -1148,6 +1139,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1231,7 +1223,6 @@
               ]
             },
             "id": "1ddc0524-3b7e-4b64-bbe4-653459289c78",
-            "zIndex": 9,
             "data": {
               "type": "tm.Actor",
               "name": "API Gateway",
@@ -1869,6 +1860,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1952,7 +1944,6 @@
               ]
             },
             "id": "37b2f3eb-070a-4990-b98d-bda0c60e60c3",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "EPIC EHR",
@@ -1986,6 +1977,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -2069,7 +2061,6 @@
               ]
             },
             "id": "1edf3c4e-9899-41fe-94be-6f09f4ec2c4d",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Active Directory",
@@ -2160,6 +2151,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -2243,7 +2235,6 @@
               ]
             },
             "id": "58aaa782-c887-4a2e-9635-d19a717242c1",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "Veeam Backup",
@@ -2277,6 +2268,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -2360,7 +2352,6 @@
               ]
             },
             "id": "351d26b2-829d-4913-93db-35b243aa1a10",
-            "zIndex": 14,
             "data": {
               "type": "tm.Actor",
               "name": "Spluk SIEM",
@@ -2433,8 +2424,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "fc7f6a9e-9b5e-42d4-bc2c-d688f9af40e9",
             "zIndex": 15,
+            "id": "fc7f6a9e-9b5e-42d4-bc2c-d688f9af40e9",
             "data": {
               "type": "tm.Text",
               "name": "Trust Boundary: Internal Network\n",
@@ -2467,6 +2458,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -2550,7 +2542,6 @@
               ]
             },
             "id": "fba27752-9c1c-45a0-bc7e-d12465eadef9",
-            "zIndex": 16,
             "data": {
               "type": "tm.Store",
               "name": "EPIC SQL Database",
@@ -2665,6 +2656,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -2795,8 +2787,7 @@
                 "informationDisclosure": 1,
                 "denialOfService": 0
               }
-            },
-            "zIndex": 17
+            }
           },
           {
             "position": {
@@ -2822,6 +2813,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -2919,8 +2911,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 18
+            }
           },
           {
             "position": {
@@ -2946,6 +2937,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -3043,8 +3035,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 19
+            }
           },
           {
             "position": {
@@ -3062,8 +3053,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "590cb224-f3be-491c-9af4-8eeb64c78813",
             "zIndex": 20,
+            "id": "590cb224-f3be-491c-9af4-8eeb64c78813",
             "data": {
               "type": "tm.Text",
               "name": "Trust Boundary: Microsoft Azure",
@@ -3091,6 +3082,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 21,
             "ports": {
               "groups": {
                 "top": {
@@ -3174,7 +3166,6 @@
               ]
             },
             "id": "8143850e-cdf5-4b27-b7d8-2ffea5a6b380",
-            "zIndex": 21,
             "data": {
               "type": "tm.Actor",
               "name": "Azure AD",
@@ -3208,6 +3199,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 22,
             "ports": {
               "groups": {
                 "top": {
@@ -3291,7 +3283,6 @@
               ]
             },
             "id": "8c06443d-e725-48c4-bc75-3c7814e2cee5",
-            "zIndex": 22,
             "data": {
               "type": "tm.Actor",
               "name": "Epic App Servers",
@@ -3320,8 +3311,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "dde897e4-2e2b-48c2-a455-b049a89cc723",
             "zIndex": 23,
+            "id": "dde897e4-2e2b-48c2-a455-b049a89cc723",
             "data": {
               "type": "tm.Text",
               "name": "Health Network - OWASP Threat Dragon Asset Map",
