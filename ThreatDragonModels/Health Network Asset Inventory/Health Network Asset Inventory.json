@@ -44,7 +44,7 @@
               "y": 40
             },
             "size": {
-              "width": 500,
+              "width": 530,
               "height": 440
             },
             "visible": true,
@@ -54,6 +54,27 @@
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1478,
+              "y": 40.000000000000114
+            },
+            "size": {
+              "width": 280,
+              "height": 300
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "3a0ebbdf-30ab-4be0-b4c6-31819ce54cb1",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false
@@ -562,7 +583,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Trust Boundary - DMZ"
+                "text": "Trust Boundary: DMZ"
               }
             },
             "visible": true,
@@ -571,7 +592,7 @@
             "zIndex": 5,
             "data": {
               "type": "tm.Text",
-              "name": "Trust Boundary - DMZ",
+              "name": "Trust Boundary: DMZ",
               "hasOpenThreats": false
             }
           },
@@ -1393,6 +1414,252 @@
             }
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "File Access",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "File Access"
+            ],
+            "id": "e567ad24-48a4-43f3-bf55-894d6c185cac",
+            "source": {
+              "x": 1127,
+              "y": 229
+            },
+            "target": {
+              "cell": "1bfa483e-4cf9-498a-8a38-fc91c2a5d581",
+              "port": "336080a5-b4f0-4f14-8f7c-c9b9f641fdd1"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Backup Jobs ",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Backup Jobs "
+            ],
+            "id": "3c579b66-2603-4628-9fc3-f77a84fc1347",
+            "source": {
+              "x": 1127,
+              "y": 289
+            },
+            "target": {
+              "cell": "5694531c-6904-4338-9aa2-914bf505ce58",
+              "port": "336080a5-b4f0-4f14-8f7c-c9b9f641fdd1"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Log Events",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Log Events"
+            ],
+            "id": "c420de3c-3149-407d-a723-e9fc69b420b8",
+            "source": {
+              "x": 1127,
+              "y": 389
+            },
+            "target": {
+              "cell": "bf6e2c1b-7d23-4de1-a9ae-397451aeddb8",
+              "port": "336080a5-b4f0-4f14-8f7c-c9b9f641fdd1"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "SQL Queries",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "SQL Queries"
+            ],
+            "id": "165b6c19-c302-409f-b7b3-e88780f8acad",
+            "source": {
+              "x": 1127,
+              "y": 112
+            },
+            "target": {
+              "cell": "fba27752-9c1c-45a0-bc7e-d12465eadef9",
+              "port": "336080a5-b4f0-4f14-8f7c-c9b9f641fdd1"
+            },
+            "vertices": [
+              {
+                "x": 1170,
+                "y": 112
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Azure AD Connection",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Azure AD Connection"
+            ],
+            "id": "cc2f85a9-3eaf-49cd-b6d6-3ea6aea4ae57",
+            "source": {
+              "x": 1127,
+              "y": 199
+            },
+            "target": {
+              "cell": "8143850e-cdf5-4b27-b7d8-2ffea5a6b380",
+              "port": "847bd181-3add-464a-88e7-0b1d954d30cb"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Database Queries",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Database Queries"
+            ],
+            "id": "4aeef29f-8ef0-4a45-8b27-ff9614b9b409",
+            "source": {
+              "x": 1363,
+              "y": 112
+            },
+            "target": {
+              "cell": "8c06443d-e725-48c4-bc75-3c7814e2cee5",
+              "port": "847bd181-3add-464a-88e7-0b1d954d30cb"
+            },
+            "vertices": [
+              {
+                "x": 1440,
+                "y": 212
+              }
+            ]
+          },
+          {
             "position": {
               "x": 1014,
               "y": 90
@@ -1871,7 +2138,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Trust Boundary - Internal Network\n"
+                "text": "Trust Boundary: Internal Network\n"
               }
             },
             "visible": true,
@@ -1880,14 +2147,14 @@
             "zIndex": 15,
             "data": {
               "type": "tm.Text",
-              "name": "Trust Boundary - Internal Network\n",
+              "name": "Trust Boundary: Internal Network\n",
               "hasOpenThreats": false
             }
           },
           {
             "position": {
-              "x": 1170,
-              "y": 100
+              "x": 1243.25,
+              "y": 95
             },
             "size": {
               "width": 120,
@@ -1995,7 +2262,7 @@
             "data": {
               "type": "tm.Store",
               "name": "EPIC SQL Database",
-              "description": "",
+              "description": "- SQL01  \n- 50GB \n-50,000 + PHI records.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2010,7 +2277,7 @@
           },
           {
             "position": {
-              "x": 1169.5,
+              "x": 1243.25,
               "y": 193
             },
             "size": {
@@ -2118,7 +2385,7 @@
             "data": {
               "type": "tm.Store",
               "name": "File Server",
-              "description": "",
+              "description": "- FILE01\n- Shared Documents ",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2134,7 +2401,7 @@
           },
           {
             "position": {
-              "x": 1169.5,
+              "x": 1243.25,
               "y": 264
             },
             "size": {
@@ -2242,7 +2509,7 @@
             "data": {
               "type": "tm.Store",
               "name": "Backup Storage",
-              "description": "",
+              "description": "- Immutable Backups\n-Veeam Repo",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2258,7 +2525,7 @@
           },
           {
             "position": {
-              "x": 1169.5,
+              "x": 1243.25,
               "y": 364
             },
             "size": {
@@ -2366,7 +2633,7 @@
             "data": {
               "type": "tm.Store",
               "name": "Security Logs",
-              "description": "",
+              "description": "Splunk Repo",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -2378,13 +2645,264 @@
               "storesInventory": false,
               "threats": []
             },
-            "zIndex": 19,
-            "tools": {
+            "zIndex": 19
+          },
+          {
+            "position": {
+              "x": 1562,
+              "y": 30
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Trust Boundary: Microsoft Azure"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "590cb224-f3be-491c-9af4-8eeb64c78813",
+            "zIndex": 20,
+            "data": {
+              "type": "tm.Text",
+              "name": "Trust Boundary: Microsoft Azure",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1549,
+              "y": 90
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure AD"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
               "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
+                {
+                  "group": "top",
+                  "id": "6ac12104-fc0b-48ea-b076-3d73b645d676"
+                },
+                {
+                  "group": "right",
+                  "id": "a2f33f82-4cd1-4ff9-8b4e-642622c89605"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a1b89f2f-e5b1-4f00-a9ac-757915b4e08b"
+                },
+                {
+                  "group": "left",
+                  "id": "847bd181-3add-464a-88e7-0b1d954d30cb"
+                }
+              ]
+            },
+            "id": "8143850e-cdf5-4b27-b7d8-2ffea5a6b380",
+            "zIndex": 21,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Azure AD",
+              "description": "Cloud Identity Service ",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1549,
+              "y": 199
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Epic App Servers"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "6ac12104-fc0b-48ea-b076-3d73b645d676"
+                },
+                {
+                  "group": "right",
+                  "id": "a2f33f82-4cd1-4ff9-8b4e-642622c89605"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a1b89f2f-e5b1-4f00-a9ac-757915b4e08b"
+                },
+                {
+                  "group": "left",
+                  "id": "847bd181-3add-464a-88e7-0b1d954d30cb"
+                }
+              ]
+            },
+            "id": "8c06443d-e725-48c4-bc75-3c7814e2cee5",
+            "zIndex": 22,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Epic App Servers",
+              "description": "FedRAMP Authorized",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
             }
           }
         ]
